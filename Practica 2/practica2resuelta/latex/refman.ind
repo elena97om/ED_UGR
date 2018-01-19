@@ -1,0 +1,135 @@
+\begin{theindex}
+
+  \item {add\+Acont\+To\+Fechahistorica}
+    \subitem {cronologia}, \hyperpage{6}
+  \item {add\+Acontecimiento}
+    \subitem {fechahistorica}, \hyperpage{12}
+  \item {add\+Fechahistorica}
+    \subitem {cronologia}, \hyperpage{6}
+  \item {asignar}
+    \subitem {fechahistorica}, \hyperpage{12}
+
+  \indexspace
+
+  \item {binary\+Search}
+    \subitem {cronologia}, \hyperpage{6}
+
+  \indexspace
+
+  \item {comparar}
+    \subitem {fechahistorica}, \hyperpage{12}
+  \item {cronologia}, \hyperpage{5}
+    \subitem {add\+Acont\+To\+Fechahistorica}, \hyperpage{6}
+    \subitem {add\+Fechahistorica}, \hyperpage{6}
+    \subitem {binary\+Search}, \hyperpage{6}
+    \subitem {cronologia}, \hyperpage{6}
+    \subitem {delete\+Fechahistorica}, \hyperpage{7}
+    \subitem {get\+Fechahistorica}, \hyperpage{7}
+    \subitem {get\+Fechashistoricas}, \hyperpage{7}
+    \subitem {is\+Fechahistorica}, \hyperpage{7}
+    \subitem {operator!=}, \hyperpage{7}
+    \subitem {operator$<$$<$}, \hyperpage{9}
+    \subitem {operator$>$$>$}, \hyperpage{9}
+    \subitem {operator+}, \hyperpage{8}
+    \subitem {operator+=}, \hyperpage{8}
+    \subitem {operator==}, \hyperpage{8}
+    \subitem {set\+Cronologia}, \hyperpage{8}
+    \subitem {set\+Fechahistorica}, \hyperpage{9}
+
+  \indexspace
+
+  \item {delete\+Acontecimiento}
+    \subitem {fechahistorica}, \hyperpage{13}
+  \item {delete\+Fechahistorica}
+    \subitem {cronologia}, \hyperpage{7}
+
+  \indexspace
+
+  \item {fechahistorica}, \hyperpage{10}
+    \subitem {add\+Acontecimiento}, \hyperpage{12}
+    \subitem {asignar}, \hyperpage{12}
+    \subitem {comparar}, \hyperpage{12}
+    \subitem {delete\+Acontecimiento}, \hyperpage{13}
+    \subitem {fechahistorica}, \hyperpage{11, 12}
+    \subitem {get\+Acontecimiento}, \hyperpage{13}
+    \subitem {get\+Acontecimientos}, \hyperpage{13}
+    \subitem {get\+Fecha}, \hyperpage{13}
+    \subitem {is\+Acontecimiento}, \hyperpage{13}
+    \subitem {number\+Of\+Acontecimientos}, \hyperpage{14}
+    \subitem {operator!=}, \hyperpage{14}
+    \subitem {operator$<$}, \hyperpage{15}
+    \subitem {operator$<$$<$}, \hyperpage{16}
+    \subitem {operator$>$}, \hyperpage{15}
+    \subitem {operator$>$$>$}, \hyperpage{16}
+    \subitem {operator+}, \hyperpage{14}
+    \subitem {operator+=}, \hyperpage{14}
+    \subitem {operator=}, \hyperpage{15}
+    \subitem {operator==}, \hyperpage{15}
+    \subitem {set\+Acontecimientos}, \hyperpage{16}
+    \subitem {set\+Fecha}, \hyperpage{16}
+  \item {fechahistorica.\+h}, \hyperpage{19}
+
+  \indexspace
+
+  \item {get\+Acontecimiento}
+    \subitem {fechahistorica}, \hyperpage{13}
+  \item {get\+Acontecimientos}
+    \subitem {fechahistorica}, \hyperpage{13}
+  \item {get\+Fecha}
+    \subitem {fechahistorica}, \hyperpage{13}
+  \item {get\+Fechahistorica}
+    \subitem {cronologia}, \hyperpage{7}
+  \item {get\+Fechashistoricas}
+    \subitem {cronologia}, \hyperpage{7}
+
+  \indexspace
+
+  \item {is\+Acontecimiento}
+    \subitem {fechahistorica}, \hyperpage{13}
+  \item {is\+Fechahistorica}
+    \subitem {cronologia}, \hyperpage{7}
+
+  \indexspace
+
+  \item {number\+Of\+Acontecimientos}
+    \subitem {fechahistorica}, \hyperpage{14}
+
+  \indexspace
+
+  \item {operator!=}
+    \subitem {cronologia}, \hyperpage{7}
+    \subitem {fechahistorica}, \hyperpage{14}
+  \item {operator$<$}
+    \subitem {fechahistorica}, \hyperpage{15}
+  \item {operator$<$$<$}
+    \subitem {cronologia}, \hyperpage{9}
+    \subitem {fechahistorica}, \hyperpage{16}
+  \item {operator$>$}
+    \subitem {fechahistorica}, \hyperpage{15}
+  \item {operator$>$$>$}
+    \subitem {cronologia}, \hyperpage{9}
+    \subitem {fechahistorica}, \hyperpage{16}
+  \item {operator+}
+    \subitem {cronologia}, \hyperpage{8}
+    \subitem {fechahistorica}, \hyperpage{14}
+  \item {operator+=}
+    \subitem {cronologia}, \hyperpage{8}
+    \subitem {fechahistorica}, \hyperpage{14}
+  \item {operator=}
+    \subitem {fechahistorica}, \hyperpage{15}
+  \item {operator==}
+    \subitem {cronologia}, \hyperpage{8}
+    \subitem {fechahistorica}, \hyperpage{15}
+
+  \indexspace
+
+  \item {set\+Acontecimientos}
+    \subitem {fechahistorica}, \hyperpage{16}
+  \item {set\+Cronologia}
+    \subitem {cronologia}, \hyperpage{8}
+  \item {set\+Fecha}
+    \subitem {fechahistorica}, \hyperpage{16}
+  \item {set\+Fechahistorica}
+    \subitem {cronologia}, \hyperpage{9}
+
+\end{theindex}

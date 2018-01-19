@@ -1,0 +1,27 @@
+\hypertarget{fechahistorica_8h}{}\section{fechahistorica.\+h File Reference}
+\label{fechahistorica_8h}\index{fechahistorica.\+h@{fechahistorica.\+h}}
+
+
+A header file implementing an historical date  Ana Isabel Guerrero Tejera  Julián Arenas Guerrero.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for fechahistorica.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classfechahistorica}{fechahistorica}
+\begin{DoxyCompactList}\small\item\em Tipo Abstracto de Datos para una fecha historica Una instancia del T\+DA fechahistorica.\+cpp en la que representamos mediante un vector de strings, los sucesos que tuvieron lugar ese año ( El objeto está compuesto por un entero que representa la fecha del evento (Negativos para años antes de Cristo) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A header file implementing an historical date  Ana Isabel Guerrero Tejera  Julián Arenas Guerrero. 
+
+\begin{DoxyDate}{Date}
+07/11/2017 
+\end{DoxyDate}

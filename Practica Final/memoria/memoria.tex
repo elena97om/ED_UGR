@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Universidad de Granada, ETSIIT \\Estructura de Datos 2017-2018} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Prática Final:\\¿Quién es quién? \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Julián Arenas Guerrero\\Ana Isabel Guerrero Tejera} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{Trabajo realizado}
+
+Se han implementado todos los métodos pedidos, los de la parte obligatoria y los de la parte opcional. Se ha implementado también una función para eliminar los nodos redundantes del árbol.\\
+
+Los únicos ficheros que han sido modificados son $quienesquien.h$ y $quienesquien.cpp$, y no se han añadido ficheros adicionales.\\
+
+\subsection{Implementación métodos}
+
+$QuienEsQuien::crear\_arbol()$: nos hemos servido de una función recursiva auxiliar. Nos hemos servido de dos tableros y vectores de personajes auxiliares, en los cuales vamos cargando la información dividida después de hacer una pregunta. Anotar que tanto en esta, como en el resto de funciones auxiliares que se han implementado, se han pasado los parámetros por referencia, lo cual es mucho más rápido. También señalar que el uso de $const$ en los parámetros es importante para no modificar variables que no queremos y en las funciones recursivas dependiendo que si queremos modificar variables en función de los niveles.\\
+
+$QuienEsQuien::eliminar\_nodos\_redundantes()$: se va recorriendo recursivamente el árbol con una función auxiliar. Se va comprobando si hay preguntas inútiles, y en el caso de que se encuentre una, mediante la función $assign\_subtree()$ se asigna, al nodo padre de la pregunta inútil, su hijo no nulo .\\
+
+$QuienEsQuien::iniciar\_juego()$: esta función no presenta gran complicanción, hemos decidido mostrar antes de realizar una pregunta los personajes levantados y las preguntas formuladas, de manera que sea más sencillo jugar y se pongan en uso las funciones \\$QuienEsQuien::informacion\_jugada(bintree<Pregunta>::node jugada\_actual)$ y $QuienEsQuien::preguntas\_formuladas(bintree<Pregunta>::node jugada)$.\\
+
+$QuienEsQuien::informacion\_jugada(bintree<Pregunta>::node jugada\_actual)$: nos hemos servido de una función auxiliar, de manera que recorremos el árbol recursivamente y al llegar a los nodos hoja guardamos los nombres en el $set$, que se pasa por parámetro y en el que guardamos la información final.\\
+
+$QuienEsQuien::informacion\_jugada(bintree<Pregunta>::node jugada\_actual)$: la implementación es muy parecida al método anterior. En este caso al llegar a las hojas, en vez de guardar los nombres, guardamos la profundidad (la cual se va incrementando por parámetro al recorrer recursivamente el árbol). La profundidad se va sumando sobre una variable que se pasa como parámetro por referencia, que después devolvemos dividida entre el número de personajes. La variable $totalProfundidad$ es de tipo $float$ para obtener los decimales en la dividión que hacemos en el return.\\
+
+$QuienEsQuien::preguntas\_formuladas(bintree<Pregunta>::node jugada)$: recorremos el árbol iterativamente hacia arriba. Vamos guardando la información de las preguntas en un string. Para saber si se respondió si ó no, hacemos una simple comprobación.\\
+
+$QuienEsQuien::aniade\_personaje(string nombre, vector<bool> caracteristicas)$: primero introducimos el nombre al final del vector de personajes y las características al final del tablero. Después vamos recorriendo el árbol iterativamente según las características del personaje a añadir hasta llegar a un nodo hoja. Encontrar el índece en el tablero de este nodo hoja (que es un personaje). Después obtenemos el string de la última pregunta que se formuló para llegar a este nodo hoja. Posteriormente buscamos el índice de esta pregunta en el tablero (en la dimendión de los atributos). Después buscamos el siguente atributo (pregunta) válida, la cual tenga una respuesta distinta para el personaje del nodo hoja alcanzado y el personaje a añadir. Finalmente sustituímos el nodo hoja por esta pregunta y se le añaden como hijo los dos personajes. Ir actualizando, además, el número de personajes que quedan levantados antes de cada pregunta.\\
+
+$QuienEsQuien::elimina\_personaje(string nombre)$: encontramos el índice del personaje en el vector de personajes. Recorrer el árbol según las características del personaje en tablero hasta alcanzarlo, e ir actualizando el número de personajes levantados antes de cada pregunta. Guardamos también si el nodo por el que se va era un hijo derecha ó izquierda, para obtener después la información de su hermano. Este hermano lo gardamos como un árbol con un sólo nodo el cual mediante la función $replace\_subtree()$ introduciremos como subárbol a su padre. Finalmente actualizamos el tablero y el vector de personajes.
+
+
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
